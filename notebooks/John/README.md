@@ -1,18 +1,25 @@
 
 # 2/7/2023 - First Meeting with TA
-
 Met with TA and explained our project. He also gave some logistical information and our lockers.
 
-# 2/10/2023 - Testing Doppler and Ultrasonic Modules
 
+# 2/10/2023 - Testing Doppler and Ultrasonic Modules
 Received our modules however the doppler module came damaged. We managed to hot glue the ceramic oscillator back on but still not sure if permanently damaged, probably have to order another one.
 
-![image](~/school/ECE445/SIGHT/notebooks/John/glued_osc.jpg)
+![image](glued_osc.jpg)
 
 Went into the lab and hooked up both to an oscilloscope and tried to see the output signal out of both modules.
 
 For the doppler module the signal as expected seemed really weak and noisy which indicates it requires an LNA. Testing the functionality, when walking towards the module head on at around a meter out a very weak beat signal is noticable. When sprinting towards the module head on at around a meter out a clear distinctive beat signal is produced.
 
-![image](~/school/ECE445/SIGHT/notebooks/John/doppler_signal.jpg)
+![image](doppler_signal.jpg)
 
 When trying to hook up the ultrasonic sensor we were not able to trigger the module even with a 10 microsecond square wave. For next time maybe using an arduino or some sort of microcontroller would be a better option then a signal generator.
+
+
+# 2/12/2023 - Researching the Microcontroller
+Learned a bit about the STM32 series of microcontrollers and how the timer works in most microcontrollers. We probably want to do a interrupt based system since polling the timer can take up a lot of resources from the processor. So the main program runs continously until a timer runs down and it triggers a interupt which shifts the control of the program from main to ISR (interupt service routine). The ISR is where we can do our calculations while the main program fills a buffer with our doppler and ultrasonic samples.
+
+Additionally we can make use of a periodic timer to accurately sample our doppler and ultrasonic modules at a fixed frequency. 
+
+![image](timer.png)
