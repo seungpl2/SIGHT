@@ -12,13 +12,13 @@ queue<double> Distances;
 double delta; // this is used to determine speed
 double curr_speed;
 
+
 void handle_sigint(int sig)
 {
-    //check queue size
-    //if less than x, push the signal
-    //else push new signal and pop oldest
+    //calculates if input arr is decreasing
     //check if signal is within threshold AND distance is decreasing
-            //if yes then calculate delta and speed and call haptic_intensity to determine intensity of signal
+            //if yes then calculate delta (arr[arr.length] - arr[0]) and
+            //speed (delta/period) and call haptic_intensity to determine intensity of signal
             //else don't send feedback  
 }
 
