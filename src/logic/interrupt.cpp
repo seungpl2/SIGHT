@@ -11,7 +11,7 @@ double period = .0002;
 queue<double> Distances;
 double delta; // this is used to determine speed
 double curr_speed;
-
+// this is a change
 
 void handle_sigint(int sig)
 {
