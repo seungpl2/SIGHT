@@ -15,7 +15,7 @@ bool complementary_filter(std::vector<double> doppler, std::vector<double> ultra
     {
         for (int n=1; n<distance.size(); n++)
         {
-            distance[n] = (a*ultrasonic[n]) + ((1-a)*((T_s*doppler[n]) + distance[n-1]));
+            distance[n] = (a*ultrasonic[n]) + ((1-a)*(distance[n-1] + (T_s*doppler[n])));
         }
 
         flag = true;

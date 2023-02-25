@@ -23,3 +23,24 @@ Learned a bit about the STM32 series of microcontrollers and how the timer works
 Additionally we can make use of a periodic timer to accurately sample our doppler and ultrasonic modules at a fixed frequency. 
 
 ![image](timer.png)
+
+
+# 2/20/2023 - Doppler Frequencies
+We first laid out a mathematical calculation in order to see what the theoretical frequencies that we would expect to see for the average speeds that we would expect people to walk/run at. 
+
+![image](doppler_math.jpg)
+
+We calculated the averages speeds by doing multiple experiments where we walked/ran 10 yards and measured the time that it took. From that we could easily calculate the speeds with which we averaged into a final number which we used in our doppler frequency calculations.
+
+After we got our theoretical max and minimum doppler frequencies we tested them out by hooking them up the doppler to a oscilloscope and measuring the frequency outputted by the doppler module when running and walking towards it.
+
+
+# 2/22/2023 - Ultrasonic Sensor
+We were able to get the ultrasonic sensor working with the STM32F303K8 microcontroller. By using an interrupt
+based system we could efficently send out and receive the Trigger and Echo signals that are used to interface with the sensor. From the time of flight data we can turn that information into a distance by using a simple equation.
+
+Distance = (T * 343/2)
+
+The 343 comes from the speed of sound while the factor of 1/2 comes from the fact that the time of flight comprises of both the forward and back paths. 
+
+For hooking the ultrasonic up to the microcontroller we had to implement a simple voltage divider with a 1 kOhm and 2 kOhm resistors which allowed us to level shift the 5 Volt Echo line to 3.3 Volts for safer input to the timer input pin on the microcontroller.
