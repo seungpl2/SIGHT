@@ -9,3 +9,21 @@ that receives signals and sends the signals to a handler
 
 We incorporated changes in our proposal based off the TA feedback and asked for a resubmission. 
 We also got our doppler radar in and started testing 
+
+# 2/20/2023 - Measuring frequency
+
+We used field testing by running and walking to measure reasonable walking and running
+speeds for a human being. We eventually were able to calculate what we believe the 
+Doppler radar will output. 
+
+
+# 2/23/2023 - Design Document
+
+We edited our design document to include better detail with our subsystems and also
+updated our block diagram
+
+# 2/26/2023
+
+We set up the STM microcontroller IDE and learned how to adjust haptic sensor feedback. 
+We are also debugging why our ultrasonic sensor is outputting data on the IDE but the
+doppler mosdule isn't 
