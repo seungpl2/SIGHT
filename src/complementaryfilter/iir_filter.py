@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from scipy import signal
 
 
+
 N = 2 # Filter Order
 cutoff_freq = 200
 sample_freq = 2000
