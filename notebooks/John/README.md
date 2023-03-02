@@ -44,3 +44,8 @@ Distance = (T * 343/2)
 The 343 comes from the speed of sound while the factor of 1/2 comes from the fact that the time of flight comprises of both the forward and back paths. 
 
 For hooking the ultrasonic up to the microcontroller we had to implement a simple voltage divider with a 1 kOhm and 2 kOhm resistors which allowed us to level shift the 5 Volt Echo line to 3.3 Volts for safer input to the timer input pin on the microcontroller.
+
+
+# 2/26/2023 - IIR Filter Design for Ultrasonic
+
+
