@@ -51,3 +51,25 @@ voltage regulators to use. We powered and grounded all of the modules.
 
 We wired all of the modules on our design, we just ran into a design issue with what parts
 we can and can't use. As well has how to place through holes. 
+
+# 3/5
+We have a complementary filter that combines doppler and ultrasonic waves to output a 
+distance value. We can fine tune our complementary filter by adjusting a scalar alpha. 
+This scalar allows us to bias the ultrasonic and doppler intensities. At alpha = 0,
+only the ultrasonic is used, at alpha = 1, only the ultrasonic is used. Every number
+in between uses a combination of both. We noticed that no matter what alpha value we 
+set, the ultrasonic sensor was only minimally adjusting the output intensity. 
+
+We didn't solve this issue. 
+
+# 3/6
+
+I started designing the PCB for the first wave of PCB orders. The biggest
+issue we ran into is how we're going to program the MCU. We realized that 
+we didn't know what pins on our MCU needed to be used to program it
+
+# 3/7
+I found the 4 pins, NRST, SWDIO, SWDCLK, and GND need to not be soldered so that
+we can use them to debug. I added a connector on our design so we can use it to
+debug and upload code. I also ran the audit on pcbway and sent the gerber
+files to the TA. 
