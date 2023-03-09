@@ -73,3 +73,28 @@ I found the 4 pins, NRST, SWDIO, SWDCLK, and GND need to not be soldered so that
 we can use them to debug. I added a connector on our design so we can use it to
 debug and upload code. I also ran the audit on pcbway and sent the gerber
 files to the TA. 
+
+Checklist for Dushyant
+How will you program the microcontroller? Does it have enough memory? Is it fast enough? Does the default bootloader let you program?
+Are any components being overvolted? What is the maximum operating voltage of your microcontroller?
+Are components hard to solder? (QFN, BGA, etc. are really hard to solder because the pads are under the package)
+Are your SMD passive components too small? 0603 imperial (not metric!) are as small as you can feasibly hand-solder. 0805 is much easier.
+Are your components in-stock?
+The maximum size your board can be is 100mm x 100mm
+Have you entered PCBway’s capabilities in the design rule checker? (6 mil minimum trace width/trace spacing; 0.3mm minimum hole size) (In PCB Editor File > Board Setup > Design Rules > Constraints
+Have you run a design rules check (DRC)?Do you know how to generate gerber files? 
+Do you know how to view gerber files? (KiCAD project window > Gerber Viewer or this online viewer)
+Do you know how to have PCBway check your gerber files?
+Things to include in your zip file
+Front copper
+Back copper
+Front soldermask
+Back soldermask
+Top silkscreen
+Bottom silkscreen
+Drill file
+Edge cuts
+F. paste (if you want a stencil)
+B. paste (if you want a stencil)
+
+THE ANSWER TO TALL OF THE ABOVE QUESTIONS IS YES
